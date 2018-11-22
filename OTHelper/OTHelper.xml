@@ -1,0 +1,102 @@
+<GuiXml>
+    <Controls>
+        <TopLevelControl name="OTHelperTLW" mouseEnabled="true" movable="true" clampedToScreen="true" hidden="true">
+
+      		<Dimensions x="200" y="200"/>
+	  		<Anchor point="TOPLEFT" relativeTo="GuiRoot" relativePoint="TOPLEFT" offsetX="500" offsetY="500" />
+
+			<OnMoveStop>
+				OTHelper.OnOTHelperTLWMove()
+			</OnMoveStop>
+
+			<Controls>
+
+				<Texture name="$(parent)_CenturionFrame" textureFile="esoui/art/icons/targetdummy_centurionminiboss_01.dds" hidden="true">
+					<Anchor point="TOPLEFT"/>
+					<Dimensions x="64" y="64"/>
+				</Texture>
+
+				<Label name="$(parent)_CenturionTimer" font="$(BOLD_FONT)|$(KB_40)|thick-outline" color="3aff00" wrapMode="ELLIPSE" verticalAlignment="4" horizontalAlignment="1" hidden="true">
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)_CenturionFrame" offsetY="55" offsetX="5" />
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$(parent)_CenturionFrame" offsetY="-2" offsetX="-2" />
+				</Label>
+
+				<Texture name="$(parent)_RodFrame" textureFile="esoui/art/treeicons/tutorial_idexicon_death_up.dds" hidden="true">
+					<Anchor point="TOP"/>
+					<Dimensions x="80" y="80"/>
+				</Texture>
+
+				<Label name="$(parent)_RodTimer" font="$(BOLD_FONT)|$(KB_54)|thick-outline" color="FF0000" wrapMode="ELLIPSE" verticalAlignment="4" horizontalAlignment="1" hidden="true">
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)_RodFrame" offsetY="55" offsetX="5" />
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$(parent)_RodFrame" offsetY="-2" offsetX="-2" />
+				</Label>
+
+				<Texture name="$(parent)_MeteorIcon" textureFile="esoui/art/icons/quest_vvardenfell_fire_bomb.dds" hidden="true">
+					<Anchor point="TOPRIGHT"/>
+					<Dimensions x="64" y="64"/>
+				</Texture>
+
+				<Label name="$(parent)_MeteorTimer" font="$(BOLD_FONT)|$(KB_40)|thick-outline" color="3aff00" wrapMode="ELLIPSE" verticalAlignment="4" horizontalAlignment="1" hidden="true">
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)_MeteorIcon" offsetY="55" offsetX="5" />
+					<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" relativeTo="$(parent)_MeteorIcon" offsetY="-2" offsetX="-2" />
+				</Label>
+
+			</Controls>
+        </TopLevelControl>
+
+
+        <TopLevelControl name="OTHelper_Notification" mouseEnabled="true" movable="true" clampedToScreen="true" hidden="true">
+	        <Dimensions x="150" y="150" />
+            <Anchor point="CENTER" relativeTo="GuiRoot" relativePoint="CENTER" offsetX="0" offsetY="-300" />
+
+			<OnMoveStop>
+				OTHelper.OnNotificationMove()
+			</OnMoveStop>
+
+            <Controls>
+                <Label name="$(parent)_Label" width="200" height="50" font="$(BOLD_FONT)|$(KB_48)|thick-outline" inheritAlpha="true" color="FF0000" wrapMode="TRUNCATE" verticalAlignment="CENTER" horizontalAlignment="CENTER">
+                    <Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" offsetY="100" />
+                </Label>
+            </Controls>
+
+			<Controls>
+                <Label name="$(parent)_CL" width="200" height="50" font="$(BOLD_FONT)|$(KB_48)|thick-outline" inheritAlpha="true" color="FF0000" wrapMode="TRUNCATE" verticalAlignment="CENTER" horizontalAlignment="CENTER">
+                    <Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER"/>
+                </Label>
+            </Controls>
+
+			<Controls>
+                <Label name="$(parent)_HA" width="200" height="50" font="$(BOLD_FONT)|$(KB_48)|thick-outline" inheritAlpha="true" color="FF0000" wrapMode="TRUNCATE" verticalAlignment="CENTER" horizontalAlignment="CENTER">
+                    <Anchor point="CENTER" relativeTo="$(parent)" relativePoint="CENTER" offsetY="50" />
+                </Label>
+            </Controls>
+
+        </TopLevelControl>
+
+
+		<TopLevelControl name="OTHelper_Archcustodian" mouseEnabled="true" movable="true" clampedToScreen="true" hidden="true">
+	        <Dimensions x="100" y="200" />
+
+            <Anchor point="TOPLEFT" relativeTo="GuiRoot" relativePoint="TOPLEFT" offsetX="900" offsetY="500" />
+
+			<OnMoveStop>
+				OTHelper.OnArchcustodianTimerMove()
+			</OnMoveStop>
+
+            <Controls>
+			
+				<Texture name="$(parent)_Icon" textureFile="esoui/art/icons/mounticon_dwarvenspider_a.dds" >
+					<Anchor point="TOPLEFT"/>
+					<Dimensions x="80" y="80"/>
+				</Texture>
+
+				<Label name="$(parent)_Timer" font="$(BOLD_FONT)|$(KB_54)|thick-outline" color="FF0000" wrapMode="TRUNCATE" verticalAlignment="4" horizontalAlignment="1">
+					<Anchor point="TOPLEFT" relativePoint="TOPLEFT" relativeTo="$(parent)_Icon" offsetY="60" offsetX="-2" />
+				</Label>
+
+            </Controls>
+        </TopLevelControl>
+
+
+	</Controls>
+</GuiXml>
